@@ -1,0 +1,33 @@
+body {
+  background: grey;
+  color: white;
+  font-weight: 900;
+  font-size: 70px;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.title {
+  text-shadow: 2px 2px 2px white;
+  text-transform: uppercase;
+  display: block;
+}
+
+.text {
+  display: block;
+  font-size: 30px;
+}
+
+.square {
+  display: inline-block;
+}
+
+.board {
+  display: inline-block;
+  border: 5px solid white;
+  width: 110px;
+  height: 70px;
+  line-height: 70px;
+}
