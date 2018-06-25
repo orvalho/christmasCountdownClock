@@ -1,5 +1,5 @@
 const countdown = () => {
-  // select elements to display countdown time in
+  // select elements to display time left in
   const daysBoard = document.querySelector('.days');
   const hoursBoard = document.querySelector('.hours');
   const minutesBoard = document.querySelector('.minutes');
@@ -9,11 +9,11 @@ const countdown = () => {
     const now = new Date();
     // set the date to countdown to
     const christmas = new Date(now.getFullYear(), 11, 25);
-    // in case we celebrated christmas this year already
+    // in case we have already celebrated christmas this year 
     if(now.getMonth() === 11 && now.getDate() > 25) {
       christmas.setFullYear(christmas.getFullYear() + 1);
     }
-    // calculate difference is days, hours, minutes and seconds
+    // calculate difference in days, hours, minutes and seconds
     const difference = christmas.getTime() - now.getTime();
     const days = Math.floor(difference / (24 * 60 * 60 * 1000));
     let hours = Math.floor((difference % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
@@ -26,7 +26,7 @@ const countdown = () => {
     if(nowOffset !== christmasOffset) {
       hours--;
     }
-    // display countdown timer in elements
+    // display countdown timer
     daysBoard.textContent = days;
     hoursBoard.textContent = hours;
     minutesBoard.textContent = minutes;
